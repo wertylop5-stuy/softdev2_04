@@ -43,9 +43,14 @@ def find_zip_score(zipcode, score):
 	})
 	)
 
-#find_borough("Bronx")
-#find_zip("11209")
-#find_zip_grade("11209", "A")
+def find_restaurant(res):
+	print_cursor(db.restaurants.find({name: {'$regex': res}}))
+
+
+find_borough("Bronx")
+find_zip("11209")
+find_zip_grade("11209", "A")
 find_zip_score("11209", 11)
+find_restaurant("Delic")
 
 connection.close()
