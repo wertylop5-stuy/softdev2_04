@@ -10,8 +10,7 @@ print col.find({}).count()
 
 def print_cursor(cursor):
 	for d in cursor:
-		if d['name'] == "Nordic Delicacies":
-			print d['name']
+		print d['name']
 
 def find_borough(bor):
 	cursor = col.find({
