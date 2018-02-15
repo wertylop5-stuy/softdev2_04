@@ -43,7 +43,7 @@ def find_zip_score(zipcode, score):
 	)
 
 def find_restaurant(res):
-	print_cursor(db.restaurants.find({name: {'$regex': res}}))
+	print_cursor(db.restaurants.find({"name": {'$regex': res}}))
 
 
 find_borough("Bronx")
