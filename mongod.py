@@ -23,10 +23,11 @@ file = open(filename, "r")
 js = json.load(file)
 
 #Inserts the data into the db
-'''
-for x in js['objects']:
-    col.insert_one(x);
-'''
+#only if empty
+if col.count()==0:
+    for x in js['objects']:
+        col.insert_one(x);
+
 
 def print_cursor(cursor):
     for d in cursor:
